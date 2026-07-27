@@ -1,0 +1,305 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MinIE-SpaTe Triple",
+  "type": "object",
+  "properties": {
+    "system": {
+      "type": "string"
+    },
+    "corpus": {
+      "type": "string"
+    },
+    "article_id": {
+      "type": "string"
+    },
+    "triple_id": {
+      "type": "string"
+    },
+    "sentence_linked": {
+      "type": "object",
+      "properties": {
+        "tokens": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "pos": {
+                "type": "string"
+              },
+              "ner": {
+                "type": "string"
+              },
+              "span": {
+                "type": "object",
+                "properties": {
+                  "start_index": {
+                    "type": "integer"
+                  },
+                  "end_index": {
+                    "type": "integer"
+                  }
+                },
+                "required": [
+                  "start_index",
+                  "end_index"
+                ]
+              },
+              "lemma": {
+                "type": "string"
+              },
+              "word": {
+                "type": "string"
+              },
+              "index": {
+                "type": "integer"
+              },
+              "w_link": {
+                "type": "object",
+                "properties": {
+                  "offset_begin_ind": {
+                    "type": "integer"
+                  },
+                  "offset_end_ind": {
+                    "type": "integer"
+                  },
+                  "phrase": {
+                    "type": "string"
+                  },
+                  "wiki_link": {
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "offset_begin_ind",
+                  "offset_end_ind",
+                  "phrase",
+                  "wiki_link"
+                ]
+              }
+            },
+            "required": [
+              "pos",
+              "ner",
+              "span",
+              "lemma",
+              "word",
+              "index",
+              "w_link"
+            ]
+          }
+        },
+        "s_id": {
+          "type": "integer"
+        },
+        "sg": {
+          "type": "string"
+        },
+        "dp": {
+          "type": "string"
+        },
+        "span": {
+          "type": "object",
+          "properties": {
+            "start_index": {
+              "type": "integer"
+            },
+            "end_index": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "start_index",
+            "end_index"
+          ]
+        }
+      },
+      "required": [
+        "tokens",
+        "s_id",
+        "sg",
+        "dp",
+        "span"
+      ]
+    },
+    "sentence_number": {
+      "type": "string"
+    },
+    "modality": {
+      "type": "string"
+    },
+    "polarity": {
+      "type": "string"
+    },
+    "quantities": {
+      "type": "object"
+    },
+    "subject": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/entity"
+      }
+    },
+    "relation": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/entity"
+      }
+    },
+    "object": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/entity"
+      }
+    },
+    "attribution_linked": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "dropped_words_subject": {
+      "type": "array"
+    },
+    "dropped_words_object": {
+      "type": "array"
+    },
+    "dropped_words_relation": {
+      "type": "array"
+    },
+    "negative_words": {
+      "type": "array"
+    },
+    "certainty_words": {
+      "type": "array"
+    },
+    "possibility_words": {
+      "type": "array"
+    },
+    "time_linked": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "space_linked": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "subj_time_linked": {
+      "type": "object"
+    },
+    "subj_space_linked": {
+      "type": "object"
+    },
+    "rel_time_linked": {
+      "type": "object"
+    },
+    "rel_space_linked": {
+      "type": "object"
+    },
+    "obj_time_linked": {
+      "type": "object"
+    },
+    "obj_space_linked": {
+      "type": "object"
+    },
+    "confidence_score": {
+      "type": "number"
+    },
+    "extraction_type": {
+      "type": "string"
+    },
+    "canonical_links": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "system",
+    "corpus",
+    "article_id",
+    "triple_id",
+    "sentence_linked",
+    "sentence_number",
+    "modality",
+    "polarity",
+    "subject",
+    "relation",
+    "object",
+    "confidence_score",
+    "extraction_type"
+  ],
+  "definitions": {
+    "entity": {
+      "type": "object",
+      "properties": {
+        "pos": {
+          "type": "string"
+        },
+        "ner": {
+          "type": "string"
+        },
+        "span": {
+          "type": "object",
+          "properties": {
+            "start_index": {
+              "type": "integer"
+            },
+            "end_index": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "start_index",
+            "end_index"
+          ]
+        },
+        "lemma": {
+          "type": "string"
+        },
+        "word": {
+          "type": "string"
+        },
+        "index": {
+          "type": "integer"
+        },
+        "w_link": {
+          "type": "object",
+          "properties": {
+            "offset_begin_ind": {
+              "type": "integer"
+            },
+            "offset_end_ind": {
+              "type": "integer"
+            },
+            "phrase": {
+              "type": "string"
+            },
+            "wiki_link": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "offset_begin_ind",
+            "offset_end_ind",
+            "phrase",
+            "wiki_link"
+          ]
+        }
+      },
+      "required": [
+        "pos",
+        "ner",
+        "span",
+        "lemma",
+        "word",
+        "index",
+        "w_link"
+      ]
+    }
+  }
+}
