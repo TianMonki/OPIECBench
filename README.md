@@ -81,4 +81,3 @@ python main.py -data ent_multi --reset
 
 The entry point calls `embedding_final.Embeddings.fit()` to run Stage 1 followed by Stage 2. The default HAC distance threshold is `0.5`, and the high-confidence filtering ratio is `0.1`.
 
-See [`todolist.md`](todolist.md) for pending release and reproducibility work.
