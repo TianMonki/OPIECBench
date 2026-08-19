@@ -35,7 +35,7 @@ python -m nltk.downloader punkt
 Place the final benchmarks and entity-linking evidence under `data/` as described in [`data/README.md`](data/README.md).
 ```
 
-## Benchmark construction
+Benchmark construction
 
 Prepare the OPIEC-Linked AVRO corpus and the following files:
 
@@ -48,12 +48,12 @@ ent_link_desc/ent_link_des
 Run the construction pipeline from `code_dataset/`:
 ```
 
-# Experiment data
+Experiment data
 
 ```text
 data/
-├── name_ambi/OPIEC_name_ambi_triples 
-├── ent_multi/OPIEC_ent_multi_triples
+├── name_ambi/OPIEC_name_ambi_triples https://drive.google.com/file/d/1eOmLIsjVvkAK3tJUXOlQIf8IQDHY0cCA/view?usp=drive_link
+├── ent_multi/OPIEC_ent_multi_triples https://drive.google.com/file/d/11BDs5YT19q32nEFIPKtUbKtRVRQ-SwW-/view?usp=drive_link
 └── ent_link/
     ├── name_ambi_ent_link
     └── ent_multi_ent_link
