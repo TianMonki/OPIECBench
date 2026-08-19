@@ -1,0 +1,10 @@
+avro-python3
+fastavro
+gensim
+nltk
+numpy
+scikit-learn
+scipy
+torch
+tqdm
+transformers
