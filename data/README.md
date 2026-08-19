@@ -1,18 +1,14 @@
-# Required experiment data
+# Experiment data
 
-这里只放不可由一次模型运行重新生成的输入，不放 `file/` 或 `output/` 中的缓存、嵌入、检查点和结果。
+Place the required input files here:
 
 ```text
 data/
-├── name_ambi/
-│   └── OPIEC_name_ambi_triples   # OPIEC-Poly, pickle
-├── ent_multi/
-│   └── OPIEC_ent_multi_triples   # OPIEC-Syno, pickle
+├── name_ambi/OPIEC_name_ambi_triples
+├── ent_multi/OPIEC_ent_multi_triples
 └── ent_link/
-    ├── name_ambi_ent_link         # OPIEC-Poly entity-link evidence, pickle
-    └── ent_multi_ent_link         # OPIEC-Syno entity-link evidence, pickle
+    ├── name_ambi_ent_link
+    └── ent_multi_ent_link
 ```
 
-最终基准 pickle 是 triple 字典列表。主模型使用的字段包括 `triple`、`triple_unique`、`subject_wiki_link` 和 `src_sentences`。
-
-实体链接文件应使用数据发布包中的原始 pickle。运行生成的缓存、嵌入、检查点和结果应保存在 `file/` 或 `output/`，不要放入此目录。
+Do not store generated caches, checkpoints, or results in this directory.
