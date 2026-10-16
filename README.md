@@ -1,10 +1,10 @@
-# OPIEC-Poly / OPIEC-Syno
+# OPIEC-Homo / OPIEC-Syno
 
-Implementation of *Benchmarking Synonymy and Polysemy in Open Knowledge Base Canonicalization*.
+Implementation of *Benchmarking Synonymy and Homonymy in Open Knowledge Base Canonicalization*.
 
 This repository contains two OPIEC-derived benchmarks and a two-stage canonicalization framework:
 
-1. **Polysemy resolution:** contextual BERT, HAC, and entity-linking supervision.
+1. **Homonymy resolution:** contextual BERT, HAC, and entity-linking supervision.
 2. **Synonymy consolidation:** semantic and TransE-based factual views.
 
 ## Repository structure
@@ -59,6 +59,12 @@ data/
     └── ent_multi_ent_link
 ```
 Intermediate files are written to `file/`; final datasets are written to `data/`.
+
+
+## Environment
+
+Computational platform: PyTorch 1.4.0, NVIDIA Geforce RTX 3090 (GPU), Inter i9-10900X (CPU), CUDA Toolkit 10.0
+
 
 ## Running the model
 
