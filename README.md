@@ -1,7 +1,6 @@
-# Benchmarking Synonymy and Homonymy in Open Knowledge Base Canonicalization
+# Rethinking Open Knowledge Base Canonicalization under Coexisting Synonymy and Homonymy
 
-
-This repository contains two OPIEC-derived benchmarks and a two-stage canonicalization framework.
+This repository contains two OPIEC-derived benchmarks (i.e., OPIEC-Homo and OPIEC-Syno) and a two-stage canonicalization framework.
 
 ## Repository structure
 
