@@ -1,11 +1,7 @@
-# OPIEC-Homo / OPIEC-Syno
+# Benchmarking Synonymy and Homonymy in Open Knowledge Base Canonicalization
 
-Implementation of *Benchmarking Synonymy and Homonymy in Open Knowledge Base Canonicalization*.
 
-This repository contains two OPIEC-derived benchmarks and a two-stage canonicalization framework:
-
-1. **Homonymy resolution:** contextual BERT, HAC, and entity-linking supervision.
-2. **Synonymy consolidation:** semantic and TransE-based factual views.
+This repository contains two OPIEC-derived benchmarks and a two-stage canonicalization framework.
 
 ## Repository structure
 
